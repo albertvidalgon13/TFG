@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>StudentPage</title>
+    <script src="/index.js" defer></script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/index.css">
+   
+</head>
+
+<body>
+    <section id="header">
+        <header>
+             <!-- Header superior conn titulo y links -->
+            <p class="logo">Made by Students for Students</p>
+            <div class="links">
+                <a href="">Home</a>
+                <a href="">Help</a>
+            </div>
+        </header>
+
+        <div class="information">
+            <img src="profile-img-def.jpg" alt="Blanc-profile-img">
+            <div class="content">
+                <p class="fill">Name: </p>
+                <p id="hero_name"></p>
+            </div>
+           <div class="content">
+                <p class="fill">Email: </p>
+                <p id="hero_email"></p>
+           </div>
+            <div class="content">
+                <p class="fill">Phone number: </p>
+                <p id="hero_p_number"></p>
+            </div>
+           
+     
+        </div>
+        
+   
+    <section id="modification">
+        <div class="inputs">
+            <input type="text" name="name" id="name" placeholder="Name">
+            <input type="text" name="email" id="email" placeholder="Email">
+            <input type="text" name="phone_number" id="phone_number" placeholder="Phone Number">
+        </div>
+    
+        <button onclick="save()">Save</button>
+    </section>
+</body>
+</html>
