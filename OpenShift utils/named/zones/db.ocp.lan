@@ -1,0 +1,42 @@
+$TTL    604800
+@       IN      SOA     ns1.ocp.lan. root (
+		2019070700     ; Serial
+		3H     ; Refresh
+		30M     ; Retry
+		2W     ; Expire
+		1W	; Minimum
+)
+        IN      NS      ns1.ocp.lan.
+        IN      MX 10   smtp.ocp.lan.
+;
+;
+
+ocp-single-node.ocp.lan.	IN	A	192.168.2.81
+ocp-single-node.lab.ocp.lan.	IN	A	192.168.2.81
+
+
+ns1.ocp.lan.		IN	A	192.168.2.1
+smtp.ocp.lan.		IN	A	192.168.2.1
+;
+ocp-svc.ocp.lan.          IN      A       192.168.2.1
+ocp-svc.lab.ocp.lan.          IN      A       192.168.2.1
+
+; Temp Bootstrap Node
+ocp-bootstrap.lab.ocp.lan.        IN      A      192.168.2.200
+
+; Control Plane Nodes
+ocp-cp-1.lab.ocp.lan.         IN      A      192.168.2.201
+ocp-cp-2.lab.ocp.lan.         IN      A      192.168.2.202
+ocp-cp-3.lab.ocp.lan.         IN      A      192.168.2.203
+
+; Worker Nodes
+ocp-w-1.lab.ocp.lan.        IN      A      192.168.2.211
+ocp-w-2.lab.ocp.lan.        IN      A      192.168.2.212
+
+; OpenShift Internal - Load balancer
+api.lab.ocp.lan.        IN    A    192.168.2.81
+api-int.lab.ocp.lan.    IN    A    192.168.2.81
+*.apps.lab.ocp.lan.     IN    A    192.168.2.81
+api.ocp-single-node.ocp.lan	IN	A	192.168.2.81
+;
+;EOF
